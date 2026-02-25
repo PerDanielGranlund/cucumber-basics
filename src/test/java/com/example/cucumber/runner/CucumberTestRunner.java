@@ -10,6 +10,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features/sum.feature")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
+//@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value="pretty, html:target/cucumber-report.html")
 public class CucumberTestRunner {
 }

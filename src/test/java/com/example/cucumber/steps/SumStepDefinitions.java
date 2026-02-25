@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class SumStepDefinitions {
 
@@ -25,6 +26,11 @@ public class SumStepDefinitions {
     @Then("the result should be {int}")
     public void the_result_should_be(int expectedResult) {
         assertEquals(expectedResult, this.result);
+    }
+
+    @Then("the result should NOT be {int}")
+    public void the_result_should_not_be(int expectedResult) {
+        assertNotEquals(expectedResult, this.result);
     }
 }
 
